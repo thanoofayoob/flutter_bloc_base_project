@@ -37,12 +37,8 @@ class AppRouter {
       //   pageBuilder: (context, state) => NotFoundScreen(),
       // ),
     ],
-    errorBuilder: (context, state) => Container(
-      child: Text('Error'),
-    ),
+    errorBuilder: (context, state) => const Text('Error'),
   );
-
-  // static GoRouter get goRouter => _goRouter;
 
   static void navigateTo(String routeName) {
     goRouter.push(routeName);
