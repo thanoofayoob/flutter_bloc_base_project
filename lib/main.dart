@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('kkkkk');
     return Builder(builder: (context) {
       return MultiBlocProvider(
         providers: [
@@ -66,7 +65,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('hhh'),
+        title: const Text('hhh'),
       ),
       body: Center(
         child: BlocBuilder<ThemeBloc, ThemeState>(
