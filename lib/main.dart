@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('kkkkk');
     return Builder(builder: (context) {
       return MultiBlocProvider(
         providers: [
