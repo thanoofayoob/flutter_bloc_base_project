@@ -9,6 +9,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'src/presentation/appThemes/bloc/theme_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyGlobalObserver();
@@ -39,7 +40,6 @@ class MyApp extends StatelessWidget {
         child: BlocBuilder<ThemeBloc, ThemeState>(
           builder: (context, state) {
             ThemeMode themeMode = state.themeMode;
-
             return MaterialApp.router(
               routerDelegate: AppRouter.goRouter.routerDelegate,
               routeInformationParser: AppRouter.goRouter.routeInformationParser,
