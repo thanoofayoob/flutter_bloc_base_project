@@ -75,6 +75,9 @@ class DioClient {
       }
     } on DioException catch (error) {
       switch (error.type) {
+        case DioExceptionType.badCertificate:
+        case DioExceptionType.badResponse:
+        case DioExceptionType.connectionError:
         case DioExceptionType.connectionTimeout:
         case DioExceptionType.sendTimeout:
         case DioExceptionType.receiveTimeout:
