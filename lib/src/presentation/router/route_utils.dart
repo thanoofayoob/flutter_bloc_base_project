@@ -3,12 +3,12 @@ enum APPAGE { splash, home, login, error }
 extension AppPageExtension on APPAGE {
   String get toPath {
     switch (this) {
-      case APPAGE.login:
+      case APPAGE.home:
         return "/";
       case APPAGE.splash:
         return "/splash";
-      case APPAGE.home:
-        return "/home";
+      case APPAGE.login:
+        return "/LOGIN";
       case APPAGE.error:
         return "/error";
     }
