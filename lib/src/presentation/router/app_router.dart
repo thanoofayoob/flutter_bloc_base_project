@@ -5,11 +5,12 @@ import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final GoRouter goRouter = GoRouter(
-    initialLocation: APPAGE.login.toPath,
+    initialLocation: APPAGE.home.toPath,
+    debugLogDiagnostics: true,
     routes: [
       GoRoute(
-        path: APPAGE.login.toPath,
-        name: APPAGE.login.toName,
+        path: APPAGE.home.toPath,
+        name: APPAGE.home.toName,
         pageBuilder: (context, state) => MaterialPage<void>(
             key: state.pageKey,
             child: MyHomePage(
@@ -17,11 +18,11 @@ class AppRouter {
             )),
       ),
       GoRoute(
-        path: APPAGE.home.toPath,
-        name: APPAGE.home.toName,
+        path: APPAGE.login.toPath,
+        name: APPAGE.login.toName,
         pageBuilder: (context, state) => MaterialPage<void>(
             key: state.pageKey,
-            child: MyHomePage(
+            child: LoginPage(
               key: state.pageKey,
             )),
       ),
@@ -43,4 +44,13 @@ class AppRouter {
   static void navigateTo(String routeName) {
     goRouter.push(routeName);
   }
+
+  static void pushAndRemoveUntil(String routeName) {
+    while (goRouter.canPop()) {
+      goRouter.pop();
+    }
+    goRouter.pushReplacement(routeName);
+  }
+
+  static void test() {}
 }
