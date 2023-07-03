@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_bloc_base_project/src/common/utils/app_configs.dart';
-import 'package:flutter_bloc_base_project/src/common/utils/app_exceptions.dart';
+import 'package:flutter_bloc_base_project/src/core/network/network_exceptions.dart';
+import 'package:flutter_bloc_base_project/src/core/utils/app_configs.dart';
 
 import 'end_points.dart';
 
