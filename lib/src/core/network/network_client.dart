@@ -6,10 +6,16 @@ import 'package:flutter_bloc_base_project/src/core/utils/app_configs.dart';
 import 'end_points.dart';
 
 class DioClient {
-  final Dio _dio;
-  DioClient(this._dio) {
+  final Dio _dio = Dio();
+  static final DioClient _singleton = DioClient._internal();
+
+  factory DioClient() {
+    return _singleton;
+  }
+  DioClient._internal() {
     initialiseDio();
   }
+
   initialiseDio() {
     _dio.options = BaseOptions(
       connectTimeout: const Duration(seconds: 5),

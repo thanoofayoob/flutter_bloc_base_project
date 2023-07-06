@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_base_project/src/common/themes/app_themes.dart';
-import 'package:flutter_bloc_base_project/src/common/utils/app_bloc_observer.dart';
+import 'package:flutter_bloc_base_project/src/core/themes/app_themes.dart';
+import 'package:flutter_bloc_base_project/src/core/utils/app_bloc_observer.dart';
+import 'package:flutter_bloc_base_project/src/presentation/app_themes/bloc/theme_bloc.dart';
 import 'package:flutter_bloc_base_project/src/presentation/router/app_router.dart';
 import 'package:flutter_bloc_base_project/src/presentation/router/route_utils.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 
-import 'src/presentation/appThemes/bloc/theme_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<void> main() async {
