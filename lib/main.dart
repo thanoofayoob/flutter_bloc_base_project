@@ -50,7 +50,6 @@ class MyApp extends StatelessWidget {
               themeMode: themeMode,
               theme: AppThemes.lightTheme,
               darkTheme: AppThemes.darkTheme,
-              // home: const MyHomePage(),
             );
           },
         ),
@@ -59,73 +58,73 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+// class MyHomePage extends StatelessWidget {
+//   const MyHomePage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('hhh'),
-      ),
-      body: Center(
-        child: BlocBuilder<ThemeBloc, ThemeState>(
-          builder: (context, state) {
-            return Column(
-              children: <Widget>[
-                ...ThemeMode.values.map((themeMode) {
-                  return RadioListTile<ThemeMode>(
-                    value: themeMode,
-                    groupValue: state.themeMode,
-                    title: Text(themeMode.name),
-                    onChanged: (newThemeMode) {
-                      if (newThemeMode != null) {
-                        context
-                            .read<ThemeBloc>()
-                            .add(ThemeModeSwitched(themeMode: newThemeMode));
-                      }
-                    },
-                  );
-                }).toList(),
-                IconButton(
-                    icon: Icon(Icons.skip_next),
-                    onPressed: () => context.goNamed(APPAGE.login.toName)),
-              ],
-            );
-          },
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('hhh'),
+//       ),
+//       body: Center(
+//         child: BlocBuilder<ThemeBloc, ThemeState>(
+//           builder: (context, state) {
+//             return Column(
+//               children: <Widget>[
+//                 ...ThemeMode.values.map((themeMode) {
+//                   return RadioListTile<ThemeMode>(
+//                     value: themeMode,
+//                     groupValue: state.themeMode,
+//                     title: Text(themeMode.name),
+//                     onChanged: (newThemeMode) {
+//                       if (newThemeMode != null) {
+//                         context
+//                             .read<ThemeBloc>()
+//                             .add(ThemeModeSwitched(themeMode: newThemeMode));
+//                       }
+//                     },
+//                   );
+//                 }).toList(),
+//                 IconButton(
+//                     icon: Icon(Icons.skip_next),
+//                     onPressed: () => context.goNamed(APPAGE.login.toName)),
+//               ],
+//             );
+//           },
+//         ),
+//       ), // This trailing comma makes auto-formatting nicer for build methods.
+//     );
+//   }
+// }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+// class LoginPage extends StatelessWidget {
+//   const LoginPage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            IconButton(
-                onPressed: () {
-                  context
-                      .read<ThemeBloc>()
-                      .add(ThemeModeSwitched(themeMode: ThemeMode.light));
-                },
-                icon: Icon(Icons.color_lens)),
-            GestureDetector(
-                onTap: () {
-                  AppRouter.navigateTo(APPAGE.home.toPath);
-                },
-                child: Text('login')),
-          ],
-        ),
-      )),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return SafeArea(
+//       child: Scaffold(
+//           body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.end,
+//           crossAxisAlignment: CrossAxisAlignment.end,
+//           children: [
+//             IconButton(
+//                 onPressed: () {
+//                   context
+//                       .read<ThemeBloc>()
+//                       .add(ThemeModeSwitched(themeMode: ThemeMode.light));
+//                 },
+//                 icon: Icon(Icons.color_lens)),
+//             GestureDetector(
+//                 onTap: () {
+//                   AppRouter.navigateTo(APPAGE.home.toPath);
+//                 },
+//                 child: Text('login')),
+//           ],
+//         ),
+//       )),
+//     );
+//   }
+// }

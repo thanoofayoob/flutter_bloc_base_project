@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_base_project/main.dart';
+import 'package:flutter_bloc_base_project/src/presentation/authentication/ui/home_page.dart';
+import 'package:flutter_bloc_base_project/src/presentation/authentication/ui/on_boarding_screens.dart';
 import 'package:flutter_bloc_base_project/src/presentation/router/route_utils.dart';
 import 'package:go_router/go_router.dart';
+
+import '../authentication/ui/login_page.dart';
 
 class AppRouter {
   static final GoRouter goRouter = GoRouter(
@@ -13,18 +17,21 @@ class AppRouter {
         name: APPAGE.home.toName,
         pageBuilder: (context, state) => MaterialPage<void>(
             key: state.pageKey,
-            child: MyHomePage(
+            child: HomePage(
               key: state.pageKey,
             )),
       ),
       GoRoute(
         path: APPAGE.login.toPath,
         name: APPAGE.login.toName,
+        pageBuilder: (context, state) =>
+            MaterialPage<void>(key: state.pageKey, child: const LoginScreen()),
+      ),
+      GoRoute(
+        path: APPAGE.splash.toPath,
+        name: APPAGE.splash.toName,
         pageBuilder: (context, state) => MaterialPage<void>(
-            key: state.pageKey,
-            child: LoginPage(
-              key: state.pageKey,
-            )),
+            key: state.pageKey, child: const OnBoardingScreen()),
       ),
       // GoRoute(
       //   path: '/profile/:id',
