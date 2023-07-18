@@ -52,7 +52,6 @@ class DeviceTypeChecker {
   }
 }
 
-
 //To check device type use this
 
 // DeviceTypeChecker deviceTypeChecker = DeviceTypeChecker();

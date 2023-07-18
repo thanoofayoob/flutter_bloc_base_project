@@ -6,7 +6,7 @@ extension AppPageExtension on APPAGE {
       case APPAGE.home:
         return "/";
       case APPAGE.splash:
-        return "/splash";
+        return "/SPLASH";
       case APPAGE.login:
         return "/LOGIN";
       case APPAGE.error:

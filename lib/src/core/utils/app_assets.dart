@@ -4,7 +4,6 @@ class AppAssets {
   static const String _imagePath = "assets/images/";
   static const String _pngImagePath = "assets/pngs/";
 
-
   static String getImagePath(String imageName,
       {bool defPath = false, bool isSvg = true}) {
     if (defPath) {

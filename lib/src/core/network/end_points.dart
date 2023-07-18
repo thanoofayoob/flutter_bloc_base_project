@@ -1,3 +1,5 @@
+// ignore_for_file: dead_code
+
 import '../utils/app_configs.dart';
 
 enum EndPoint { getCountryList, getCatergoryList, getCityList }

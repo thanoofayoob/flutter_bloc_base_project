@@ -44,6 +44,16 @@ dependencies:
   path_provider: ^2.0.9
   flutter_flavor: ^3.1.1
   dio: ^5.2.1+1
+  graphql_flutter: ^5.1.2
+  flutter_secure_storage: ^8.0.0
+  shared_preferences: ^2.2.0
+  intl: ^0.18.1
+#  tie_picker: ^0.0.2
+
+  
+
+
+  
 
 
 dev_dependencies:
@@ -56,6 +66,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  freezed: ^2.4.1
+  build_runner: ^2.4.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
